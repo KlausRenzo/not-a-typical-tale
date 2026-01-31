@@ -1,13 +1,17 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class PlayerController : MonoBehaviour
+namespace Bluender.Scripts
 {
-	[SerializeField] private int range = 2;
-	public void OnMouseEnter()
+	public class PlayerController : MonoBehaviour
 	{
-		var randomVector = new Vector3(Random.Range(-range, range), Random.Range(-range, range), Random.Range(-range, range));
+		[SerializeField] private int range = 2;
 
-		this.transform.position = randomVector;
+		public void OnMouseEnter()
+		{
+			var randomVector = new Vector3(Random.Range(-range, range), Random.Range(-range, range), Random.Range(-range, range));
+
+			this.transform.position = randomVector;
+		}
 	}
 }
