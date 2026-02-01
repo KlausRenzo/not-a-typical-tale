@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BlockDefinition
   blockNumber: 2
   minimumScore: 0
+  maskRadius: 75
   phases:
   - npc: {fileID: 11400000, guid: cfbbe3e13cd50534f8e6536bc065028d, type: 2}
     question: "e g\u2019havevan minaci\xE0 el cullegh che g\u2019havarian denunzi\xE0

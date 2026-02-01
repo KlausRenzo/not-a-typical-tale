@@ -10,7 +10,10 @@ using UnityEngine.Serialization;
 
 public class MaskManager : MonoBehaviour
 {
-	[SerializeField] private float draggingSpeed;
+	[FormerlySerializedAs("draggingSpeed")] [SerializeField]
+	private float baseDraggingSpeed;
+
+	[SerializeField] private float malusDraggingSpeed = 1;
 	private Vector3 showPosition;
 	private Vector3 hidePosition;
 
@@ -24,6 +27,7 @@ public class MaskManager : MonoBehaviour
 	[SerializeField] private List<TargetPlaceholder> targets;
 	[SerializeField] private float radius = 100;
 	[SerializeField] private GameObject targetPrefab;
+	public MaskBehaviour cursor;
 
 	public void Initialize(GameManager gameManager)
 	{
@@ -47,7 +51,9 @@ public class MaskManager : MonoBehaviour
 	public TweenerCore<Vector3, Vector3, VectorOptions> Enable()
 	{
 		Debug.Log("MaskManager Enable");
-		var score = _gameManager.score;
+		var score = _gameManager.bonusScore;
+
+		var radius = _gameManager.activeBlock.maskRadius;
 		foreach (var target in targets)
 		{
 			switch (Math.Abs((int) target.state))
@@ -72,10 +78,13 @@ public class MaskManager : MonoBehaviour
 					target.gameObject.SetActive(score >= steps[2]);
 					break;
 			}
+
+			target.transform.localPosition = target.transform.localPosition.normalized * radius;
 		}
 
 		return this.transform.DOMove(showPosition, 1).Play();
 	}
+
 
 	public TweenerCore<Vector3, Vector3, VectorOptions> Disable()
 	{
@@ -86,7 +95,7 @@ public class MaskManager : MonoBehaviour
 	{
 		selector.transform.DOKill();
 
-		selector.transform.position += delta * draggingSpeed;
+		selector.transform.position += delta * baseDraggingSpeed / (_gameManager.burnout * malusDraggingSpeed);
 		var maxDistance = radius * 1.2f;
 
 		selector.transform.localPosition = Vector3.ClampMagnitude(selector.transform.localPosition, maxDistance);
@@ -103,7 +112,12 @@ public class MaskManager : MonoBehaviour
 			return nearest;
 		}
 
-		selector.transform.DOMove(center.position, returnDuration).Play();
+		ResetPosition();
 		return null;
+	}
+
+	public void ResetPosition()
+	{
+		selector.transform.DOMove(center.position, returnDuration).Play();
 	}
 }

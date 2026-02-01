@@ -60,5 +60,7 @@ public class GameManager : MonoBehaviour
 		return _activePhaseIndex == activeBlock.phases.Count;
 	}
 
-	public int score;
+	public int bonusScore;
+	public int isolationScore;
+	public int burnout;
 }

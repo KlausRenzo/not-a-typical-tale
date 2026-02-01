@@ -9,7 +9,7 @@ public class NextBlockState : StateMachineBehaviour
 		base.OnStateEnter(animator, stateInfo, layerIndex);
 		_gameManager = ServiceManager.GetService<GameManager>();
 
-		if (_gameManager.activeBlock == null || _gameManager.score >= _gameManager.activeBlock.minimumScore)
+		if (_gameManager.activeBlock == null || _gameManager.bonusScore >= _gameManager.activeBlock.minimumScore)
 		{
 			_gameManager.GoToNextBlock();
 			animator.SetTrigger("NextSection");

@@ -9,7 +9,9 @@ public class FeedbackState : StateMachineBehaviour
 	{
 		base.OnStateEnter(animator, stateInfo, layerIndex);
 		_gameManager = ServiceManager.GetService<GameManager>();
-
+		
+		_gameManager.maskManager.ResetPosition();
+		
 		_gameManager.maskManager.Disable()
 					.OnComplete(()=> animator.SetTrigger("Next"));
 	}

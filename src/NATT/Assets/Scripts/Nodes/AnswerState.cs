@@ -12,6 +12,7 @@ public class AnswerState : StateMachineBehaviour
 		_gameManager = ServiceManager.GetService<GameManager>();
 		startTime = Time.time;
 		_phase = _gameManager.activePhase;
+		_gameManager.maskManager.cursor.ResetSprite();
 	}
 
 	public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -20,23 +21,25 @@ public class AnswerState : StateMachineBehaviour
 
 		if (Time.time - startTime > _phase.time)
 		{
-			_gameManager.score -= _phase.malus;
+			_gameManager.burnout++;
 			animator.SetTrigger("BadAnswer");
 		}
 
 		var answer = _gameManager.player.AnsweringUpdate();
 		if (answer == null)
 			return;
-		
+
+		_gameManager.maskManager.cursor.SetSpriteToEmotion(answer.state);
+
 		Debug.Log(">" + answer.state + "<");
 		if (answer.state == _phase.requiredState)
 		{
-			_gameManager.score += _phase.bonus;
+			_gameManager.bonusScore += _phase.bonus;
 			animator.SetTrigger("GoodAnswer");
 		}
 		else
 		{
-			_gameManager.score -= _phase.malus;
+			_gameManager.isolationScore += _phase.malus;
 			animator.SetTrigger("BadAnswer");
 		}
 	}
