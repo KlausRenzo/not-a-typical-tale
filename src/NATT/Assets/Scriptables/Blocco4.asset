@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74985d1e5e008cc4f9d3c3908fb96847, type: 3}
+  m_Name: Blocco4
+  m_EditorClassIdentifier: Assembly-CSharp::BlockDefinition
+  blockNumber: 4
+  phases:
+  - npc: {fileID: 11400000, guid: 2b2058c9309463549810829fe4998d75, type: 2}
+    question: "M l'\xE8 diventaa p\xE0lida e l'ha d\xEC ai alter duu de st\xE0 zitt.  "
+    distance: 3
+    requiredState: -1
+    bonus: 3
+    malus: 1
+  - npc: {fileID: 11400000, guid: 2b2058c9309463549810829fe4998d75, type: 2}
+    question: "Gh'eren duu omm che parlaven del bottin soteraa, precisament che i
+      dan\xE9e i apparteneven a vun di duu  "
+    distance: 3
+    requiredState: -3
+    bonus: 4
+    malus: 1
+  - npc: {fileID: 11400000, guid: bdecb626c0e641f4cb1a6711f13dc8ab, type: 2}
+    question: "e che i eran l\xEC perch\xE9 on vecc parent l'aveva soteraa per tegnilli
+      al sicur in cas de bisogna.  "
+    distance: 2
+    requiredState: -2
+    bonus: 2
+    malus: 1
+  - npc: {fileID: 11400000, guid: bdecb626c0e641f4cb1a6711f13dc8ab, type: 2}
+    question: "Quann i duu omm hinn partii, l'\xE8 scoppiada ona baruffa  "
+    distance: 1
+    requiredState: -4
+    bonus: 2
+    malus: 1
+  - npc: {fileID: 11400000, guid: bdecb626c0e641f4cb1a6711f13dc8ab, type: 2}
+    question: 'El C e ''l R eren furios  '
+    distance: 3
+    requiredState: 4
+    bonus: 4
+    malus: 3
+  - npc: {fileID: 11400000, guid: bdecb626c0e641f4cb1a6711f13dc8ab, type: 2}
+    question: "M no dom\xE0 el gh'aveva mentii, ma in puu el j'era dree a men\xE0
+      a f\xE0 un crimen  "
+    distance: 3
+    requiredState: 4
+    bonus: 3
+    malus: 2
+  - npc: {fileID: 11400000, guid: bdecb626c0e641f4cb1a6711f13dc8ab, type: 2}
+    question: "a rob\xE0 i danee de la gent.  "
+    distance: 3
+    requiredState: 4
+    bonus: 4
+    malus: 2

@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74985d1e5e008cc4f9d3c3908fb96847, type: 3}
+  m_Name: Blocco3
+  m_EditorClassIdentifier: Assembly-CSharp::BlockDefinition
+  blockNumber: 3
+  phases:
+  - npc: {fileID: 11400000, guid: 7131ec67779b9744e8972ee516b2be22, type: 2}
+    question: "Per\xF2, i duu i eren insistent e hann menasciaa el so collega che
+      l'avarien denunci\xE0a a la polizzia per frod e che l'avaria ris'ci\xE0a de
+      fin\xEC in preson e anca de perd el lavor\xE0.  "
+    distance: 1
+    requiredState: 2
+    bonus: 3
+    malus: 1
+  - npc: {fileID: 11400000, guid: 7131ec67779b9744e8972ee516b2be22, type: 2}
+    question: "Donca el M el gh'ha dii ai s\xF2 collega che l'avaria restituid i
+      dan\xE9e el des del mes in cors  "
+    distance: 3
+    requiredState: -3
+    bonus: 4
+    malus: 1
+  - npc: {fileID: 11400000, guid: c14cb63c2725da14bbf30c5598c16f5f, type: 2}
+    question: "ma che i gh'aveven de and\xE0 a ciap\xE0i a la soa c\xE0 de vacanza,
+      che la se trovava in su un lagh in montagna, arent a la citt\xE0.  "
+    distance: 2
+    requiredState: 3
+    bonus: 5
+    malus: 3
+  - npc: {fileID: 11400000, guid: db5ca8990cb433f488ffcf9052b719ce, type: 2}
+    question: "Na volta l\xEC, per\xF2, i s'inn accort che l'M l'era nervos e gh'hann
+      domandad el perch\xE8 e, soratutt, indove l'era i danee.  "
+    distance: 2
+    requiredState: -3
+    bonus: 4
+    malus: 3
+  - npc: {fileID: 11400000, guid: db5ca8990cb433f488ffcf9052b719ce, type: 2}
+    question: "El s\xF2 collega el gh'ha spiegad che i eren scondud sota terra, arent
+      a la riva del lagh   "
+    distance: 1
+    requiredState: 1
+    bonus: 3
+    malus: 3
+  - npc: {fileID: 11400000, guid: 2b2058c9309463549810829fe4998d75, type: 2}
+    question: "perch\xE8 i eren danee minga deciarad e se podeven no deciar\xE0.  "
+    distance: 3
+    requiredState: -2
+    bonus: 2
+    malus: 1
+  - npc: {fileID: 11400000, guid: 2b2058c9309463549810829fe4998d75, type: 2}
+    question: 'I duu eren esitant ma i eren tropp interessaa a vess rimborsad, donca
+      i hann acetad.  '
+    distance: 2
+    requiredState: -3
+    bonus: 5
+    malus: 3
+  - npc: {fileID: 11400000, guid: 2b2058c9309463549810829fe4998d75, type: 2}
+    question: "Quella stess sira, quand hinn rivaa a on capann per ciap\xE0 i utensii
+      che ghe serviven per scav\xE0, hinn sentii di v\xF6us che vegniven de f\xF6ra.  "
+    distance: 3
+    requiredState: 3
+    bonus: 5
+    malus: 2

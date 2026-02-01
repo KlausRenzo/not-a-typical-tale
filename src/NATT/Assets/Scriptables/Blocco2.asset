@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74985d1e5e008cc4f9d3c3908fb96847, type: 3}
+  m_Name: Blocco2
+  m_EditorClassIdentifier: Assembly-CSharp::BlockDefinition
+  blockNumber: 2
+  phases:
+  - npc: {fileID: 11400000, guid: cfbbe3e13cd50534f8e6536bc065028d, type: 2}
+    question: "e g\u2019havevan minaci\xE0 el cullegh che g\u2019havarian denunzi\xE0
+      a la polizia per frode e che g\u2019havaria rischi\xE0 de v\xE8ss en pres\xF2n"
+    distance: 1
+    requiredState: -1
+    bonus: 3
+    malus: 1
+  - npc: {fileID: 11400000, guid: 7131ec67779b9744e8972ee516b2be22, type: 2}
+    question: "S\xF2 dom\xE0 ona regazza sempl\xECs che la sta in pee davant a on
+      bagaj e la ghe domanda de vul\xE0gh ben... "
+    distance: 1
+    requiredState: 2
+    bonus: 2
+    malus: 1
+  - npc: {fileID: 11400000, guid: 7131ec67779b9744e8972ee516b2be22, type: 2}
+    question: "L'\xE8 dom\xE0 in di misteri\xF6us equazion de l'amuur che se p\xF6
+      tr\xF6\xE0 on motiv logic. S\xF2 ch\xEC per via de t\xEC. Te seet la reson
+      per cui esisti. Te seet t\xFCcc i m\xE8 motiv."
+    distance: 1
+    requiredState: -1
+    bonus: 2
+    malus: 2
+  - npc: {fileID: 11400000, guid: c14cb63c2725da14bbf30c5598c16f5f, type: 2}
+    question: "Tegn i t\xF2 amis v\xE8cin, ma i t\xF2 nemis ancam\xF2 pussee v\xE8cin.  "
+    distance: 1
+    requiredState: 2
+    bonus: 4
+    malus: 2
+  - npc: {fileID: 11400000, guid: c14cb63c2725da14bbf30c5598c16f5f, type: 2}
+    question: 'I robb che te gh''heet a la fin te possessen ti.  '
+    distance: 2
+    requiredState: 1
+    bonus: 2
+    malus: 2
+  - npc: {fileID: 11400000, guid: c14cb63c2725da14bbf30c5598c16f5f, type: 2}
+    question: "La p\xF6 minga pi\xF6 per semper.  "
+    distance: 3
+    requiredState: -2
+    bonus: 3
+    malus: 1

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74985d1e5e008cc4f9d3c3908fb96847, type: 3}
+  m_Name: Blocco1 - Intro
+  m_EditorClassIdentifier: Assembly-CSharp::BlockDefinition
+  blockNumber: 1
+  phases:
+  - npc: {fileID: 11400000, guid: cfbbe3e13cd50534f8e6536bc065028d, type: 2}
+    question: "Du cullegh C e R se sun truva a discuter cunt un cullegh M perch\xE9
+      l ultem ghaveva dumanda un prestit per una presunt startup che C e R l eran
+      interessa."
+    distance: 1
+    requiredState: 1
+    bonus: 3
+    malus: 1
+  - npc: {fileID: 11400000, guid: 7131ec67779b9744e8972ee516b2be22, type: 2}
+    question: Pero, a la fin, la startup se rivela minga esistent e i dane sun sta
+      dupera per gioeugh e per risolver i prublem persunai de M.
+    distance: 1
+    requiredState: -1
+    bonus: 5
+    malus: 2
+  - npc: {fileID: 11400000, guid: cfbbe3e13cd50534f8e6536bc065028d, type: 2}
+    question: La soma che i duu collega voreven indree l'era granda e, naturalment,
+      el M el gh'aveva no i danee subit a disposizion.
+    distance: 1
+    requiredState: 1
+    bonus: 5
+    malus: 2
