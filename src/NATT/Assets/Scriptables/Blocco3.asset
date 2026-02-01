@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Blocco3
   m_EditorClassIdentifier: Assembly-CSharp::BlockDefinition
   blockNumber: 3
+  minimumScore: 0
+  maskRadius: 100
   phases:
   - npc: {fileID: 11400000, guid: 7131ec67779b9744e8972ee516b2be22, type: 2}
     question: "Per\xF2, i duu i eren insistent e hann menasciaa el so collega che
@@ -20,6 +22,7 @@ MonoBehaviour:
       fin\xEC in preson e anca de perd el lavor\xE0.  "
     distance: 1
     requiredState: 2
+    time: 0
     bonus: 3
     malus: 1
   - npc: {fileID: 11400000, guid: 7131ec67779b9744e8972ee516b2be22, type: 2}
@@ -27,6 +30,7 @@ MonoBehaviour:
       dan\xE9e el des del mes in cors  "
     distance: 3
     requiredState: -3
+    time: 0
     bonus: 4
     malus: 1
   - npc: {fileID: 11400000, guid: c14cb63c2725da14bbf30c5598c16f5f, type: 2}
@@ -34,6 +38,7 @@ MonoBehaviour:
       che la se trovava in su un lagh in montagna, arent a la citt\xE0.  "
     distance: 2
     requiredState: 3
+    time: 0
     bonus: 5
     malus: 3
   - npc: {fileID: 11400000, guid: db5ca8990cb433f488ffcf9052b719ce, type: 2}
@@ -41,6 +46,7 @@ MonoBehaviour:
       domandad el perch\xE8 e, soratutt, indove l'era i danee.  "
     distance: 2
     requiredState: -3
+    time: 0
     bonus: 4
     malus: 3
   - npc: {fileID: 11400000, guid: db5ca8990cb433f488ffcf9052b719ce, type: 2}
@@ -48,12 +54,14 @@ MonoBehaviour:
       a la riva del lagh   "
     distance: 1
     requiredState: 1
+    time: 0
     bonus: 3
     malus: 3
   - npc: {fileID: 11400000, guid: 2b2058c9309463549810829fe4998d75, type: 2}
     question: "perch\xE8 i eren danee minga deciarad e se podeven no deciar\xE0.  "
     distance: 3
     requiredState: -2
+    time: 0
     bonus: 2
     malus: 1
   - npc: {fileID: 11400000, guid: 2b2058c9309463549810829fe4998d75, type: 2}
@@ -61,6 +69,7 @@ MonoBehaviour:
       i hann acetad.  '
     distance: 2
     requiredState: -3
+    time: 0
     bonus: 5
     malus: 3
   - npc: {fileID: 11400000, guid: 2b2058c9309463549810829fe4998d75, type: 2}
@@ -68,5 +77,6 @@ MonoBehaviour:
       che ghe serviven per scav\xE0, hinn sentii di v\xF6us che vegniven de f\xF6ra.  "
     distance: 3
     requiredState: 3
+    time: 0
     bonus: 5
     malus: 2

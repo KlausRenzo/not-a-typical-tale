@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Blocco4
   m_EditorClassIdentifier: Assembly-CSharp::BlockDefinition
   blockNumber: 4
+  minimumScore: 0
+  maskRadius: 150
   phases:
   - npc: {fileID: 11400000, guid: 2b2058c9309463549810829fe4998d75, type: 2}
     question: "M l'\xE8 diventaa p\xE0lida e l'ha d\xEC ai alter duu de st\xE0 zitt.  "
     distance: 3
     requiredState: -1
+    time: 0
     bonus: 3
     malus: 1
   - npc: {fileID: 11400000, guid: 2b2058c9309463549810829fe4998d75, type: 2}
@@ -25,6 +28,7 @@ MonoBehaviour:
       dan\xE9e i apparteneven a vun di duu  "
     distance: 3
     requiredState: -3
+    time: 0
     bonus: 4
     malus: 1
   - npc: {fileID: 11400000, guid: bdecb626c0e641f4cb1a6711f13dc8ab, type: 2}
@@ -32,18 +36,21 @@ MonoBehaviour:
       al sicur in cas de bisogna.  "
     distance: 2
     requiredState: -2
+    time: 0
     bonus: 2
     malus: 1
   - npc: {fileID: 11400000, guid: bdecb626c0e641f4cb1a6711f13dc8ab, type: 2}
     question: "Quann i duu omm hinn partii, l'\xE8 scoppiada ona baruffa  "
     distance: 1
     requiredState: -4
+    time: 0
     bonus: 2
     malus: 1
   - npc: {fileID: 11400000, guid: bdecb626c0e641f4cb1a6711f13dc8ab, type: 2}
     question: 'El C e ''l R eren furios  '
     distance: 3
     requiredState: 4
+    time: 0
     bonus: 4
     malus: 3
   - npc: {fileID: 11400000, guid: bdecb626c0e641f4cb1a6711f13dc8ab, type: 2}
@@ -51,11 +58,13 @@ MonoBehaviour:
       a f\xE0 un crimen  "
     distance: 3
     requiredState: 4
+    time: 0
     bonus: 3
     malus: 2
   - npc: {fileID: 11400000, guid: bdecb626c0e641f4cb1a6711f13dc8ab, type: 2}
     question: "a rob\xE0 i danee de la gent.  "
     distance: 3
     requiredState: 4
+    time: 0
     bonus: 4
     malus: 2

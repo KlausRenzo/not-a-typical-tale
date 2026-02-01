@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BlockDefinition
   blockNumber: 1
   minimumScore: 0
-  maskRadius: 30
+  maskRadius: 50
   phases:
   - npc: {fileID: 11400000, guid: cfbbe3e13cd50534f8e6536bc065028d, type: 2}
     question: "Du cullegh C e R se sun truva a discuter cunt un cullegh M perch\xE9
