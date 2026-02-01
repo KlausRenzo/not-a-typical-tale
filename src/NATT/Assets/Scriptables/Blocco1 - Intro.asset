@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Blocco1 - Intro
   m_EditorClassIdentifier: Assembly-CSharp::BlockDefinition
   blockNumber: 1
+  minimumScore: 0
   phases:
   - npc: {fileID: 11400000, guid: cfbbe3e13cd50534f8e6536bc065028d, type: 2}
     question: "Du cullegh C e R se sun truva a discuter cunt un cullegh M perch\xE9
@@ -20,6 +21,7 @@ MonoBehaviour:
       interessa."
     distance: 1
     requiredState: 1
+    time: 10
     bonus: 3
     malus: 1
   - npc: {fileID: 11400000, guid: 7131ec67779b9744e8972ee516b2be22, type: 2}
@@ -27,6 +29,7 @@ MonoBehaviour:
       dupera per gioeugh e per risolver i prublem persunai de M.
     distance: 1
     requiredState: -1
+    time: 10
     bonus: 5
     malus: 2
   - npc: {fileID: 11400000, guid: cfbbe3e13cd50534f8e6536bc065028d, type: 2}
@@ -34,5 +37,6 @@ MonoBehaviour:
       el M el gh'aveva no i danee subit a disposizion.
     distance: 1
     requiredState: 1
+    time: 10
     bonus: 5
     malus: 2

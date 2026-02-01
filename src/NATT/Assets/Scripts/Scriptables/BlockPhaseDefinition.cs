@@ -10,6 +10,8 @@ public class BlockPhaseDefinition
 	[Range(1, 3)] public int distance = 1;
 	public MaskState requiredState;
 
+	public float time;
+	
 	public int bonus;
 	public int malus;
 }

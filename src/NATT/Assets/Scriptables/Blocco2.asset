@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Blocco2
   m_EditorClassIdentifier: Assembly-CSharp::BlockDefinition
   blockNumber: 2
+  minimumScore: 0
   phases:
   - npc: {fileID: 11400000, guid: cfbbe3e13cd50534f8e6536bc065028d, type: 2}
     question: "e g\u2019havevan minaci\xE0 el cullegh che g\u2019havarian denunzi\xE0
       a la polizia per frode e che g\u2019havaria rischi\xE0 de v\xE8ss en pres\xF2n"
     distance: 1
     requiredState: -1
+    time: 10
     bonus: 3
     malus: 1
   - npc: {fileID: 11400000, guid: 7131ec67779b9744e8972ee516b2be22, type: 2}
@@ -26,6 +28,7 @@ MonoBehaviour:
       bagaj e la ghe domanda de vul\xE0gh ben... "
     distance: 1
     requiredState: 2
+    time: 10
     bonus: 2
     malus: 1
   - npc: {fileID: 11400000, guid: 7131ec67779b9744e8972ee516b2be22, type: 2}
@@ -34,23 +37,27 @@ MonoBehaviour:
       per cui esisti. Te seet t\xFCcc i m\xE8 motiv."
     distance: 1
     requiredState: -1
+    time: 10
     bonus: 2
     malus: 2
   - npc: {fileID: 11400000, guid: c14cb63c2725da14bbf30c5598c16f5f, type: 2}
     question: "Tegn i t\xF2 amis v\xE8cin, ma i t\xF2 nemis ancam\xF2 pussee v\xE8cin.  "
     distance: 1
     requiredState: 2
+    time: 0
     bonus: 4
     malus: 2
   - npc: {fileID: 11400000, guid: c14cb63c2725da14bbf30c5598c16f5f, type: 2}
     question: 'I robb che te gh''heet a la fin te possessen ti.  '
     distance: 2
     requiredState: 1
+    time: 0
     bonus: 2
     malus: 2
   - npc: {fileID: 11400000, guid: c14cb63c2725da14bbf30c5598c16f5f, type: 2}
     question: "La p\xF6 minga pi\xF6 per semper.  "
     distance: 3
     requiredState: -2
+    time: 0
     bonus: 3
     malus: 1

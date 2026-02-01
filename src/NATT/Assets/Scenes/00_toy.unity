@@ -909,6 +909,7 @@ MonoBehaviour:
   radius: 100
   targetPrefab: {fileID: 1320936928189955406, guid: 4e8459948fffc594f9ca97195a4ab603, type: 3}
   dropDistance: 10
+  steps: 070000000e00000015000000
 --- !u!1 &686127183
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,7 +950,9 @@ MonoBehaviour:
   - {fileID: 1499994215}
   - {fileID: 394462831}
   - {fileID: 640944976}
-  cameraFront: {fileID: 428334832}
+  position1: {fileID: 428334832}
+  position2: {fileID: 428334832}
+  position3: {fileID: 428334832}
 --- !u!4 &686127185
 Transform:
   m_ObjectHideFlags: 0
@@ -1283,6 +1286,7 @@ MonoBehaviour:
     question: 
     distance: 1
     requiredState: 0
+    time: 0
     bonus: 0
     malus: 0
   score: 0

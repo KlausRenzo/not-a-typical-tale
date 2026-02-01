@@ -32,77 +32,7 @@ public class GameManager : MonoBehaviour
 		player.Initialize(this);
 		maskManager.Initialize(this);
 		crowdManager.Initialize(this);
-
-		// yield return new WaitForSeconds(2);
-		// GoToNextBlock();
 	}
-
-	// private void Update()
-	// {
-	// 	Debugger();
-	// 	StateUpdate();
-	// }
-
-	// private void Debugger()
-	// {
-	// 	if (Input.GetKeyDown(KeyCode.P))
-	// 	{
-	// 		NextState();
-	// 	}
-	// }
-
-	// private void StateUpdate()
-	// {
-	// 	switch (State)
-	// 	{
-	// 		case GameState.SelectingNpc:
-	// 			break;
-	//
-	// 		case GameState.Answering:
-	// 			
-	// 			break;
-	//
-	// 		case GameState.GettingFeedback:
-	// 			break;
-	//
-	// 		case GameState.Idle:
-	// 			return;
-	// 		default:
-	// 			throw new ArgumentOutOfRangeException();
-	// 	}
-	// }
-
-
-	private void NextState()
-	{
-		switch (State)
-		{
-			case GameState.Answering:
-				State = GameState.Idle;
-				maskManager.Disable()
-							.OnComplete(() => State = GameState.GettingFeedback);
-				break;
-
-			case GameState.Idle:
-			case GameState.GettingFeedback:
-				crowdManager.SendNewNpc();
-							// .OnComplete(GoToNextSection);
-				break;
-
-			case GameState.SelectingNpc:
-				State = GameState.Idle;
-				maskManager.Enable()
-							.OnComplete(() =>
-							{
-								player.StartAnswering();
-								State = GameState.Answering;
-							});
-				break;
-			default:
-				throw new ArgumentOutOfRangeException();
-		}
-	}
-
 
 	public BlockDefinition activeBlock;
 	public BlockPhaseDefinition activePhase;
@@ -111,8 +41,6 @@ public class GameManager : MonoBehaviour
 
 	public void GoToNextBlock()
 	{
-		State = GameState.Idle;
-
 		activeBlockIndex++;
 
 		activeBlock = blocks[activeBlockIndex];
@@ -120,17 +48,11 @@ public class GameManager : MonoBehaviour
 		activePhase = activeBlock.phases[0];
 	}
 
-	// public void GoToNextSection()
-	// {
-	// 	if (NextPhase())
-	// 	{
-	// 		GoToNextBlock();
-	// 	}
-	// 	else
-	// 	{
-	// 		NextState();
-	// 	}
-	// }
+	public void RestartBlock()
+	{
+		_activePhaseIndex = 0;
+		activePhase = activeBlock.phases[0];
+	}
 
 	public bool NextPhase()
 	{
@@ -138,11 +60,5 @@ public class GameManager : MonoBehaviour
 		return _activePhaseIndex == activeBlock.phases.Count;
 	}
 
-	public void SetBlock(BlockDefinition activeBlock)
-	{
-	}
-
 	public int score;
-
-	
 }

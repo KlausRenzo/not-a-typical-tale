@@ -5,5 +5,6 @@ using System.Collections.Generic;
 public class BlockDefinition : ScriptableObject
 {
 	public int blockNumber;
+	public int minimumScore;
 	public List<BlockPhaseDefinition> phases;
 }
