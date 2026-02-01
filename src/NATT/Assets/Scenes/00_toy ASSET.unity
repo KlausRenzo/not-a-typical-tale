@@ -996,7 +996,7 @@ MonoBehaviour:
   targets: []
   radius: 100
   targetPrefab: {fileID: 1320936928189955406, guid: 4e8459948fffc594f9ca97195a4ab603, type: 3}
-  cursor: {fileID: 0}
+  cursor: {fileID: 176298269}
   dropDistance: 10
   steps: 070000000e00000015000000
 --- !u!1 &686127183
