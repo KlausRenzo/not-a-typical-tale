@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 426a1c82fe704b0080efb003c23ffabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeedbackState
+  clip: {fileID: 8300000, guid: 2e30a983766b66047bc07455d87d94a4, type: 3}
 --- !u!1101 &-6150867393931671406
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -174,7 +175,7 @@ AnimatorStateMachine:
     m_Position: {x: 290, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2471458608161965772}
-    m_Position: {x: 590, y: 450, z: 0}
+    m_Position: {x: 610, y: 450, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3802609021890123017}
     m_Position: {x: 890, y: 450, z: 0}
@@ -200,6 +201,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9ac352dcff45b78ea10cd66ebd24a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NextBlockState
+  clips:
+  - {fileID: 8300000, guid: 11c2b171d7054454b8f5dc1f1a3eeffe, type: 3}
+  - {fileID: 8300000, guid: 603d9827dcd0a804bb8d6f3996184991, type: 3}
+  - {fileID: 8300000, guid: 1af56e888557a844c904b4a0e1933217, type: 3}
+  - {fileID: 8300000, guid: 34c34502dab29e548acdedc979ae3683, type: 3}
 --- !u!1101 &-4696955404036304961
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -479,6 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 426a1c82fe704b0080efb003c23ffabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeedbackState
+  clip: {fileID: 8300000, guid: 2d4e586732a39bf459374227c8c703da, type: 3}
 --- !u!114 &1637173017954775378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -491,6 +498,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b31a3e4a224989a1318def743afd65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AskQuestionState
+  clips:
+  - {fileID: 8300000, guid: 7486d498f6e71504686b51cb32f9f8a5, type: 3}
+  - {fileID: 8300000, guid: ddfdfd8e7aa451a4485989edb8849f0a, type: 3}
+  - {fileID: 8300000, guid: e08628072b5a71c4b9a5f38830d211a3, type: 3}
 --- !u!1102 &3160003657948231423
 AnimatorState:
   serializedVersion: 6

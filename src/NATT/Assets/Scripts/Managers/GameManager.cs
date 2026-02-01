@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
@@ -63,4 +59,18 @@ public class GameManager : MonoBehaviour
 	public int bonusScore;
 	public int isolationScore;
 	public int burnout;
+
+	[SerializeField] private AudioSource _fxSource;
+	[SerializeField] private AudioSource _musicSource;
+
+	public void PlaySound(AudioClip clip)
+	{
+		_fxSource.PlayOneShot(clip);
+	}
+
+	public void PlayMusic(AudioClip clip)
+	{
+		_musicSource.clip = clip;
+		_musicSource.Play();
+	}
 }
