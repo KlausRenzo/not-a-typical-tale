@@ -42,9 +42,11 @@ public class MaskManager : MonoBehaviour
 	}
 
 	[SerializeField] private float dropDistance = 10;
+	
 
 	public TweenerCore<Vector3, Vector3, VectorOptions> Enable()
 	{
+		Debug.Log("MaskManager Enable");
 		return this.transform.DOMove(showPosition, 1).Play();
 	}
 
@@ -63,19 +65,20 @@ public class MaskManager : MonoBehaviour
 		selector.transform.localPosition = Vector3.ClampMagnitude(selector.transform.localPosition, maxDistance);
 	}
 
-	public bool StopDrag()
+	public TargetPlaceholder StopDrag()
 	{
-		var nearest = targets.OrderBy(x => (x.transform.position - selector.transform.position).magnitude).First();
+		TargetPlaceholder nearest = targets.OrderBy(x => (x.transform.position - selector.transform.position).magnitude).First();
 		var distance = (nearest.transform.position - selector.transform.position).magnitude;
 		Debug.Log(distance);
 		if (distance < dropDistance)
 		{
-			_gameManager.OnMaskDropped(nearest);
 			selector.transform.DOMove(nearest.transform.position, 0.25f).Play();
-			return true;
+			return nearest;
 		}
 
 		selector.transform.DOMove(center.position, returnDuration).Play();
-		return false;
+		return null;
 	}
+
+	
 }

@@ -21,6 +21,10 @@ public class CrowdManager : MonoBehaviour
 
 	public TweenerCore<Vector3, Vector3, VectorOptions> SendNewNpc()
 	{
-		return _npcs.First().transform.DOMove(cameraFront.position, 0.5f).SetEase(Ease.OutQuint).Play();
+		var npc = _gameManager.activePhase.npc;
+		_activeNpc = _npcs.First(x => x.npc == npc);
+		return _activeNpc.transform
+						.DOMove(cameraFront.position, 0.5f).SetEase(Ease.OutQuint)
+						.Play();
 	}
 }

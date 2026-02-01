@@ -12,8 +12,6 @@ public class PlayerController : MonoBehaviour
 	public MaskBehaviour activeMask;
 	public PlayerState State { get; private set; }
 
-	public event Action<MaskBehaviour> MaskSelected;
-
 	public void Initialize(GameManager gameManager)
 	{
 		_gameManager = gameManager;
@@ -38,46 +36,50 @@ public class PlayerController : MonoBehaviour
 				return;
 
 			State++;
-			MaskSelected?.Invoke(mask);
 			activeMask = mask;
 		}
 	}
 
-	private void ManageDraggingInput()
+	private TargetPlaceholder ManageDraggingInput()
 	{
 		if (Input.GetMouseButtonUp(0))
 		{
-			if (_gameManager.maskManager.StopDrag())
+			var dragResult = _gameManager.maskManager.StopDrag();
+			if (dragResult != null)
 			{
-				State = PlayerState.Disabled;
-				return;
+				State = PlayerState.Idle;
+				return dragResult;
 			}
 
 			State = PlayerState.Idle;
-			return;
+			return null;
 		}
 
 		var delta = Input.mousePositionDelta;
 		_gameManager.maskManager.Drag(delta);
+		return null;
 	}
 
 
-	public void AnsweringUpdate()
+	public TargetPlaceholder AnsweringUpdate()
 	{
 		switch (State)
 		{
 			case PlayerState.Idle:
 				ManageIdleInput();
-				break;
+				return null;
 
 			case PlayerState.Dragging:
-				ManageDraggingInput();
+				return ManageDraggingInput();
 				break;
 		}
+
+		return null;
 	}
 
 	public void StartAnswering()
 	{
+		Debug.Log("Start answering");
 		State = PlayerState.Idle;
 	}
 }

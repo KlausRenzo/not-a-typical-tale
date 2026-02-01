@@ -684,6 +684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7544583037386454007, guid: ffc6ef8d77a613e4cadb9c642ad64ba7, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b2058c9309463549810829fe4998d75, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1243,6 +1247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 783105521}
   - component: {fileID: 783105520}
+  - component: {fileID: 783105522}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1268,6 +1273,19 @@ MonoBehaviour:
   gameCamera: {fileID: 1624071553}
   maskCamera: {fileID: 1624071553}
   _state: 0
+  blocks:
+  - {fileID: 11400000, guid: 667f57882289de641b7f6272c3963909, type: 2}
+  - {fileID: 11400000, guid: 2e592ad2e18a6fd4f95701f6cc989b2a, type: 2}
+  - {fileID: 11400000, guid: 2157b8d579b158e49934cd972beee59d, type: 2}
+  - {fileID: 11400000, guid: 99c822420b6f7b5428192550cf3a0111, type: 2}
+  activeBlock: {fileID: 0}
+  activePhase:
+    npc: {fileID: 0}
+    question: 
+    distance: 1
+    requiredState: 0
+    bonus: 0
+    malus: 0
 --- !u!4 &783105521
 Transform:
   m_ObjectHideFlags: 0
@@ -1283,6 +1301,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &783105522
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783105519}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb28717a1a55bb440aa18510d24b2bf5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &834251888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1335,6 +1375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7544583037386454007, guid: ffc6ef8d77a613e4cadb9c642ad64ba7, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 11400000, guid: db5ca8990cb433f488ffcf9052b719ce, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1714,6 +1758,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7544583037386454007, guid: ffc6ef8d77a613e4cadb9c642ad64ba7, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 11400000, guid: c14cb63c2725da14bbf30c5598c16f5f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2007,6 +2055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7544583037386454007, guid: ffc6ef8d77a613e4cadb9c642ad64ba7, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 11400000, guid: bdecb626c0e641f4cb1a6711f13dc8ab, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2064,6 +2116,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7544583037386454007, guid: ffc6ef8d77a613e4cadb9c642ad64ba7, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 11400000, guid: 7131ec67779b9744e8972ee516b2be22, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2651,6 +2707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule
       objectReference: {fileID: 0}
+    - target: {fileID: 7544583037386454007, guid: ffc6ef8d77a613e4cadb9c642ad64ba7, type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 11400000, guid: cfbbe3e13cd50534f8e6536bc065028d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
